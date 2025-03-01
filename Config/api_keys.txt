@@ -1,0 +1,4 @@
+GITHUB_TOKEN=your_github_token
+CHAOS_API_KEY=your_chaos_api_key
+SHODAN_API_KEY=your_shodan_api_key
+VIRUSTOTAL_API_KEY=your_virustotal_api_key
