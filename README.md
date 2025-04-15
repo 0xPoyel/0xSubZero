@@ -2,7 +2,7 @@
 
 <p align="center"><img src="assets/Screenshot_2025.png"></p>
 
-## 📜 Description
+## Description
 0xSubZero automates the entire subdomain enumeration process using various tools and APIs, making reconnaissance more efficient.
 - Collects subdomains from various sources (Passive, Active, APIs)
 - Filters & de-duplicates results
@@ -11,7 +11,7 @@
 - Generates detailed HTML reports
 - Logs all actions for easy debugging
 
-## 🚀 Features
+## Features
 - Passive Subdomain Enumeration (via OSINT tools & APIs)
 - Active Subdomain Enumeration (via brute-forcing)
 - Multiple Enumeration Techniques (Certificates, GitHub, VirusTotal, etc.)
@@ -20,7 +20,7 @@
 - Tool Installation & API Key Validation
 - Error Handling & Logging
 
-## 🛠 Tools Required
+## Tools Required
 
 0xSubZero integrates multiple tools for passive and active subdomain enumeration. Below is a list of required tools and their purpose:
 
@@ -36,7 +36,7 @@
 10. `Chaos`	Retrieves subdomains using Project Discovery's API
 11. `Shosubgo`	Shosubgo	Finds subdomains using Shodan API
 
-## 📥 Installation Instructions
+## Installation Instructions
 
 ### Step 1: Clone the Repository
 
@@ -58,7 +58,7 @@ SHODAN_API_KEY=your_shodan_api_key
 VIRUSTOTAL_API_KEY=your_virustotal_api_key
 ```
 
-## 📌 Usage Instructions
+## Usage Instructions
 ### Step 1: Basic Subdomain Enumeration
 ```bash
 chmod +x 0xSubZero.sh
@@ -75,10 +75,6 @@ chmod +x 0xSubZero.sh
 ### Step 4: Validate API Keys
 ```bash
 ./0xSubZero.sh -a
-```
-### Step 5: Update 0xSubZero
-```bash
-./0xSubZero.sh -up
 ```
 ### Step 6: View Help Menu
 ```bash
@@ -102,7 +98,6 @@ Options:
   -c, --check       Check if all required tools are installed.
   -i, --install     Install all required tools.
   -a, --apikey      Validate that all required API keys are present.
-  -up, --update     Update 0xSubZero tools to the latest version.
   -h, --help        Display this help menu.
 
 Examples:
@@ -110,12 +105,11 @@ Examples:
   ./0xSubZero.sh -c
   ./0xSubZero.sh -i
   ./0xSubZero.sh -a
-  ./0xSubZero.sh -up
 ```
-## 🎥 YouTube Tutorial
-📺 Watch a full video tutorial here:
+## YouTube Tutorial
+Watch a full video tutorial here:
 
-## 📂 Output Files
+## Output Files
 
 After execution, the results are stored in an automatically created results directory (e.g., subdomain_example.com_YYYY-MM-DD_HH:MM:SS
 
@@ -124,11 +118,11 @@ After execution, the results are stored in an automatically created results dire
 3. `webs_info.txt` Detailed information about live subdomains (IP, tech, etc.)
 4. `Subdomains_Report.html` Interactive HTML report
 
-## 🔍 Example
+## Example
 ```bash
 ../0xSubZero.sh example.com
 ```
-### 📂 Example Output Directory:
+### Example Output Directory:
 
 ```bash
 subdomain_example.com_2025-02-28_14:30:00
@@ -137,28 +131,28 @@ subdomain_example.com_2025-02-28_14:30:00
 │── webs_info.txt
 │── Subdomains_Report.html
 ```
-### 📜 Sample Subdomains Found (ALL_Subdomains.txt):
+### Sample Subdomains Found (ALL_Subdomains.txt):
 ```bash
 admin.example.com
 mail.example.com
 dev.example.com
 beta.example.com
 ```
-### 📜 Sample Alive Subdomains (Alive_Subdomains.txt):
+### Sample Alive Subdomains (Alive_Subdomains.txt):
 ```bash
 admin.example.com
 mail.example.com
 ```
-### 📜 Sample Web Info (webs_info.txt):
+### Sample Web Info (webs_info.txt):
 ```bash
 https://admin.example.com [200] [Admin Portal] [IP: 192.168.1.1] [nginx] [PHP, JavaScript]
 https://mail.example.com [403] [Mail Server] [IP: 192.168.1.2] [Apache] [Python, React]
 ```
-### 📜 Sample HTML Report (Subdomains_Report.html):
+### Sample HTML Report (Subdomains_Report.html):
 
 🔗 View Sample HTML Report
 
-### 📦 Dependencies
+### Dependencies
 - OS: Linux (Debian-based)
 - Tools: `curl` `jq` `git` `go` `python3-pip`
 - Go Packages: `gau` `httpx` `subfinder` `chaos-client` `github-subdomains`
@@ -169,8 +163,8 @@ To install dependencies manually:
 sudo apt update && sudo apt install -y curl jq git golang python3-pip
 pip3 install shodan censys
 ```
-## ⚠️ Reminder
-🚨 Responsible Disclosure Policy
+##  Reminder
+⚠️ Responsible Disclosure Policy
 - Only test on domains you own or have explicit permission to test.
 - Do not use for illegal activities.
 - Respect rate limits & API usage policies.
