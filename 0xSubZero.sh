@@ -34,14 +34,12 @@ function display_help() {
     echo "  -c, --check       Check if all required tools are installed."
     echo "  -i, --install     Install all required tools."
     echo "  -a, --apikey      Validate that all required API keys are present."
-    echo "  -up, --update     Update 0xSubZero tools to the latest version."
     echo "  -h, --help        Display this help menu."
     echo -e "\nExamples:"
     echo "  ./script.sh example.com"
     echo "  ./0xSubZero.sh -c"
     echo "  ./0xSubZero.sh -i"
     echo "  ./0xSubZero.sh -a"
-    echo "  ./0xSubZero.sh -up"
 }
 
 # Function: Check Required Tools
@@ -110,35 +108,6 @@ function check_api_keys() {
     echo -e "\033[1;32mAll API keys are present.\033[0m"
 }
 
-# Function: Update Tools
-function update_tools() {
-    echo -e "\033[1;34mUpdating tool...\033[0m"
-
-    # Navigate to the parent directory (only if needed)
-    if [ -d "0xSubZero" ]; then
-        echo -e "\033[1;33mRemoving old version...\033[0m"
-        rm -rf 0xSubZero
-    else
-        echo -e "\033[1;33mNo previous version found. Skipping removal.\033[0m"
-    fi
-
-    # Clone new version
-    echo -e "\033[1;34mCloning new version from GitHub...\033[0m"
-    cd ..
-    rm -rf 0xSubZero
-    git clone https://github.com/0xPoyel/0xSubZero.git
-    cd 0xSubZero
-
-    # Check if clone was successful
-    if [ -d "0xSubZero" ]; then
-        cd 0xSubZero || { echo -e "\033[1;31mFailed to enter directory. Exiting.\033[0m"; return 1; }
-        echo -e "\033[1;32mUpdate complete! New version installed in $(pwd)\033[0m"
-    else
-        echo -e "\033[1;31mClone failed! Please check the repository URL.\033[0m"
-        return 1
-    fi
-}
-
 # Main Logic
 if [ "$DOMAIN" == "-h" ] || [ "$DOMAIN" == "--help" ]; then
     display_help
@@ -151,9 +120,6 @@ elif [ "$DOMAIN" == "-i" ] || [ "$DOMAIN" == "--install" ]; then
     exit 0
 elif [ "$DOMAIN" == "-a" ] || [ "$DOMAIN" == "--apikey" ]; then
     check_api_keys
-    exit 0
-elif [ "$DOMAIN" == "-up" ] || [ "$DOMAIN" == "--update" ]; then
-    update_tools
     exit 0
 elif [ -z "$DOMAIN" ]; then
     echo -e "\033[1;31mPlease provide a valid option or domain.\033[0m"
