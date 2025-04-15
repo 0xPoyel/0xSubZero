@@ -59,24 +59,12 @@ VIRUSTOTAL_API_KEY=your_virustotal_api_key
 ```
 
 ## Usage Instructions
-### Step 1: Basic Subdomain Enumeration
+### Subdomain Enumeration
 ```bash
 chmod +x 0xSubZero.sh
 ./0xSubZero.sh example.com
 ```
-### Step 2: Check Installed Tools
-```bash
-./0xSubZero.sh -c
-```
-### Step 3: Install Missing Tools
-```bash
-./0xSubZero.sh -i
-```
-### Step 4: Validate API Keys
-```bash
-./0xSubZero.sh -a
-```
-### Step 6: View Help Menu
+
 ```bash
 ┌──(kali㉿kali)-[~/0xSubZero]
 └─$ ./0xSubZero.sh -h
