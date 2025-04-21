@@ -2,7 +2,7 @@
 
 <p align="center"><img src="assets/Screenshot_2025.png"></p>
 
-## Connect with me
+## Connect
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zabed-ullah-poyel/)
 [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@zabedullahpoyel)
@@ -15,17 +15,11 @@
 
 ## Description
 0xSubZero automates the entire subdomain enumeration process using various tools and APIs, making reconnaissance more efficient.
+
+## Features
 - Collects subdomains from various sources (Passive, Active, APIs)
 - Filters & de-duplicates results
 - Performs active DNS brute-forcing
-- Identifies live subdomains using httpx
-- Generates detailed HTML reports
-- Logs all actions for easy debugging
-
-## Features
-- Passive Subdomain Enumeration (via OSINT tools & APIs)
-- Active Subdomain Enumeration (via brute-forcing)
-- Multiple Enumeration Techniques (Certificates, GitHub, VirusTotal, etc.)
 - Live Subdomain Checking using httpx
 - Automatic HTML Report Generation
 - Tool Installation & API Key Validation
