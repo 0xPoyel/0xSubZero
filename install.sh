@@ -8,8 +8,10 @@ sudo apt update
 echo "[+] Installing Amass..."
 wget -q https://github.com/owasp-amass/amass/releases/download/v3.23.3/amass_Linux_amd64.zip
 unzip -q amass_Linux_amd64.zip
+cd amass_Linux_amd64
 chmod +x amass
 sudo mv amass /usr/bin/
+cd ..
 rm -f amass_Linux_amd64.zip
 
 # Install Go (if not installed)
